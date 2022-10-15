@@ -1,8 +1,8 @@
 # Bonds
 
-Discord bot for publishing notification about changed bonds on the secondary market.
+Discord bot for publishing notifications about bonds changes on the secondary market.
 
-Supports calculating net YTM based on the bond maturity and current price on the secondarymarket.
+Supports calculating net YTM based on the bond maturity and current price.
 
 Data source:
 - https://gpwcatalyst.pl/notowania-obligacji-obligacje-korporacyjne
