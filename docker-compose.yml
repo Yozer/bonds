@@ -1,0 +1,24 @@
+version: "3.7"
+
+services:
+  mongo_bonds_db:
+    image: mongo:4
+    container_name: mongo_bonds_db
+    env_file:
+      - .env
+    ports:
+      - "27018:27017"
+    volumes:
+      - mongo_bonds_container:/data/db
+    restart: unless-stopped
+
+  bonds-service:
+    build: .
+    container_name: bonds-service
+    depends_on:
+      - mongo_bonds_db
+    env_file:
+      - .env
+
+volumes:
+  mongo_bonds_container:
